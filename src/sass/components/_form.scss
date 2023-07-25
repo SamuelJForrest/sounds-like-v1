@@ -1,0 +1,10 @@
+@use '../utils/variables' as var;
+
+.form {
+  &-count {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    color: rgba(var.$color-black, 0.4);
+  }
+}

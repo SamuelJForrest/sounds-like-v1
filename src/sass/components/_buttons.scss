@@ -1,0 +1,46 @@
+@use '../utils/variables' as var;
+
+$buttonPosition: 1.6rem;
+
+@mixin setButtonColor($btnColor) {
+  background: $btnColor;
+  border-color: var.$color-clear;
+
+  &:hover,
+  &:focus {
+    background: var.$color-clear;
+    border-color: $btnColor;
+  }
+}
+
+.button {
+  cursor: pointer;
+  background: none;
+  border: 2px solid;
+  padding: 1.2rem 2.4rem;
+  color: var.$color-black;
+  font-family: var.$font-family;
+  font-weight: var.$body-medium;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+  transition: all 0.3s;
+
+  &.__absolute {
+    position: absolute;
+    bottom: $buttonPosition;
+    right: $buttonPosition;
+
+    &.__left {
+      right: auto;
+      left: $buttonPosition;
+    }
+  }
+
+  &.__red {
+    @include setButtonColor(var.$color-red);
+  }
+
+  &.__yellow {
+    @include setButtonColor(var.$color-yellow);
+  }
+}

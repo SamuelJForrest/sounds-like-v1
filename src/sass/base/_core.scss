@@ -1,0 +1,27 @@
+@use '../utils/variables' as var;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: var.$font-family;
+  background: var.$color-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var.$body-semibold;
+}
+
+h1 {
+  font-size: 4.2rem;
+  margin-bottom: 0.8rem;
+}
